@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Personal Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-icon">✓</div>
+      <div><h2>Task<span>Flow</span></h2><p>Personal Task Manager</p></div>
+    </div>
+    <div class="nav-right"><span class="online"><i></i> System Online</span><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button></div>
+  </header>
+
+  <main class="dashboard">
+    <section class="hero card">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR PRODUCTIVITY DASHBOARD</p>
+        <h1>Manage Your <span>Tasks</span></h1>
+        <p class="hero-subtitle">Plan your day, track progress, and get things done.</p>
+        <div class="pills"><span>✓ Easy Planning</span><span>✓ Quick Actions</span><span>✓ Track Progress</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="art-icon">☑</div><strong>Daily Goals</strong></div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card card"><div class="stat-icon blue">▤</div><div><p>Total Tasks</p><strong id="totalCount">0</strong></div></article>
+      <article class="stat-card card"><div class="stat-icon green">✓</div><div><p>Completed</p><strong id="completedCount">0</strong></div></article>
+      <article class="stat-card card"><div class="stat-icon orange">◷</div><div><p>Pending</p><strong id="pendingCount">0</strong></div></article>
+      <article class="stat-card card"><div class="stat-icon purple">▥</div><div><p>Progress</p><strong id="progressCount">0%</strong></div></article>
+    </section>
+
+    <section class="tasks-panel card">
+      <div class="panel-heading">
+        <div class="panel-icon">＋</div>
+        <div><h2>My Tasks</h2><p>Add and organize your daily activities</p></div>
+      </div>
+      <form id="taskForm" class="add-form">
+        <input id="taskInput" type="text" placeholder="What do you need to do today?" maxlength="120" autocomplete="off" required>
+        <select id="priorityInput" aria-label="Task priority"><option value="Medium">Medium priority</option><option value="High">High priority</option><option value="Low">Low priority</option></select>
+        <button class="primary-btn" type="submit">＋ <span>Add Task</span></button>
+      </form>
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="pending">Pending</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+        <input id="searchInput" class="search" type="search" placeholder="Search tasks..." aria-label="Search tasks">
+      </div>
+      <div id="taskList" class="task-list"></div>
+      <div id="emptyState" class="empty-state"><div>✦</div><h3>No tasks yet</h3><p>Add your first task to get started.</p></div>
+      <div class="progress-wrap"><div class="progress-label"><span>Overall progress</span><strong id="progressLabel">0% completed</strong></div><div class="progress-track"><div id="progressBar" class="progress-bar"></div></div></div>
+    </section>
+    <footer>Made to keep your day organized <span>•</span> TaskFlow</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
