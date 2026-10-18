@@ -25,7 +25,7 @@ TaskFlow is a simple, responsive To-Do List web application built using HTML, CS
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/TaskFlow-Todo-List.git
+   git clone https://github.com/Fakruddin-Coder/TaskFlow-Todo-List
    ```
 
 2. Open the project folder in VS Code.
@@ -45,7 +45,7 @@ TaskFlow-Todo-List/
 
 ## Live Demo
 
-**Deployed Application:** Add your deployment URL here.
+**Deployed Application:** https://taskflow-todo-list-alpha.vercel.app/
 
 ## Future Improvements
 
